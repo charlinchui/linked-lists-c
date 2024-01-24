@@ -7,10 +7,8 @@ struct Canciones {
   struct Canciones *next;
 };
 
-struct Canciones *agregarCanciones(struct Canciones *head,
-                                   const char tituloCancion[]) {
-  struct Canciones *cancion =
-      (struct Canciones *)malloc(sizeof(struct Canciones));
+struct Canciones *agregarCanciones(struct Canciones *head, const char tituloCancion[]) {
+  struct Canciones *cancion = (struct Canciones *)malloc(sizeof(struct Canciones));
   // Error Handling -> Prepararnos por si hay algun error.
   if (cancion == NULL) {
     fprintf(stderr, "Error: No se pudo asignar memoria para el nodo. \n");
@@ -53,15 +51,11 @@ int main(int argc, char *argv[]) {
   struct Canciones *listaReproducción = NULL;
 
   // Agregar titulos a la lista
-  listaReproducción =
-      agregarCanciones(listaReproducción, "Everlong - Foo Fighters");
-  listaReproducción =
-      agregarCanciones(listaReproducción, "Another Love - Tom Odell");
-  listaReproducción =
-      agregarCanciones(listaReproducción, "Silence Speaks - While She Sleeps");
+  listaReproducción = agregarCanciones(listaReproducción, "Everlong - Foo Fighters");
+  listaReproducción = agregarCanciones(listaReproducción, "Another Love - Tom Odell");
+  listaReproducción = agregarCanciones(listaReproducción, "Silence Speaks - While She Sleeps");
   listaReproducción = agregarCanciones(listaReproducción, "Creep - Radiohead");
-  listaReproducción =
-      agregarCanciones(listaReproducción, "Imagine - John Lennon");
+  listaReproducción = agregarCanciones(listaReproducción, "Imagine - John Lennon");
 
   // Imprimir la lista
   printf("Lista de Reproducción\n");
